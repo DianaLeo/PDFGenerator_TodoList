@@ -1,0 +1,45 @@
+.form {
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
+}
+
+.formInput{
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px rgb(7, 26, 59);
+}
+.formInput:focus{
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.formBtn{
+    position: absolute;
+    right:0;
+    width: 50px;
+    aspect-ratio: 1;
+    margin: 12px;
+    border-radius: 50%;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(51, 86, 150);
+    color: white;
+    transition: 0.2s;
+    box-shadow: 1px 1px 4px black;
+}
+
+.formBtn:hover{
+    background-color: rgb(89, 121, 182);
+}
+
+.formBtn:active{
+    transform: scale(0.9);
+    box-shadow: 0 0 2px black;
+}

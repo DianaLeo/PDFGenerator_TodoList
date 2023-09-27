@@ -1,0 +1,39 @@
+.formSingle {
+    display: flex;
+    padding: 20px;
+    background-color: rgb(51, 86, 150);
+    width: 40%;
+    min-width: 300px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.formSingle.done{
+    background-color: rgb(42, 61, 95);
+    color:lightgray;
+}
+.formSingleText{
+    flex:1;
+    font-size: 20px;
+    border: none;
+}
+.formSingleText:focus{
+    outline: none;
+}
+.formSingleText.done{
+    text-decoration: line-through;
+}
+.formSingleText:disabled{
+    background-color: transparent;
+    color:white;
+}
+.icon{
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:700px) {
+    .formSingle{
+        width: 100%;
+    }
+}
