@@ -14,7 +14,6 @@ const Learnings: FC = () => {
             <UpdateMultipleState />
             <hr></hr>
             <UseEffectOneStateDependsOnAnother />
-            {/* <UseEffect /> */}
             <hr></hr>
             <UseRef />
             <hr></hr>

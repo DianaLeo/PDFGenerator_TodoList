@@ -21,51 +21,51 @@ export const UseEffectOneStateDependsOnAnother: FC = () => {
     )
 };
 
-export const UseEffect: FC = () => {
-    const jason = { name: 'jason', age: 18 }
-    const angela = { name: 'angela', age: 18 }
-    const diana = { name: 'diana', age: 18 }
+// export const UseEffect: FC = () => {
+//     const jason = { name: 'jason', age: 18 }
+//     const angela = { name: 'angela', age: 18 }
+//     const diana = { name: 'diana', age: 18 }
 
-    const [value, setValue] = useState(jason)
-    //const [value, setValue] = useState(100)
-    const count = useRef(0)
+//     const [value, setValue] = useState(jason)
+//     //const [value, setValue] = useState(100)
+//     const count = useRef(0)
 
-    useEffect(() => {
-        count.current = count.current + 1
-        console.log('Inside useEffect ', value)
-    }, [value])
+//     useEffect(() => {
+//         count.current = count.current + 1
+//         console.log('Inside useEffect ', value)
+//     }, [value])
 
-    // const clickHandler = () => {
-    //     setValue(v=>v+1)
-    //     console.log(value)
+//     // const clickHandler = () => {
+//     //     setValue(v=>v+1)
+//     //     console.log(value)
 
-    //     setValue(v=>v+1)
-    //     console.log(value)
-    // }
+//     //     setValue(v=>v+1)
+//     //     console.log(value)
+//     // }
 
-    const clickHandler = () => {
-        setValue({ ...value, age: 20 })
-        console.log(value)
+//     const clickHandler = () => {
+//         setValue({ ...value, age: 20 })
+//         console.log(value)
 
-        setValue({ ...value, age: 25 })
-        console.log(value)
-    }
+//         setValue({ ...value, age: 25 })
+//         console.log(value)
+//     }
 
-    // const clickHandlerAsync = async () => {
-    //     await setValue(angela)
-    //     console.log(value)
+//     // const clickHandlerAsync = async () => {
+//     //     await setValue(angela)
+//     //     console.log(value)
 
-    //     await setValue(diana)
-    //     console.log(value)
-    // }
+//     //     await setValue(diana)
+//     //     console.log(value)
+//     // }
 
-    console.log('rendered ', count.current, ' times')
+//     console.log('rendered ', count.current, ' times')
 
-    //console.log(value)
-    return (
-        <>
-            <h3>UseEffect How to Render</h3>
-            <button onClick={() => { clickHandler() }}>Set Value</button>
-        </>
-    )
-}
+//     //console.log(value)
+//     return (
+//         <>
+//             <h3>UseEffect How to Render</h3>
+//             <button onClick={() => { clickHandler() }}>Set Value</button>
+//         </>
+//     )
+// }

@@ -1,4 +1,4 @@
-import { FC, FormEvent, useReducer, useState } from "react"; import TaskifyInputFeild from '../components/Takify/TaskifyInputFeild'
+import { FC, FormEvent, useEffect, useReducer, useState } from "react"; import TaskifyInputFeild from '../components/Takify/TaskifyInputFeild'
 import './Taskify.css'
 import { Todo } from "../models/model";
 import TaskifyTodoList from "../components/Takify/TaskifyTodoList";
@@ -14,7 +14,7 @@ export type Actions =
     | { type: ACTIONTYPE.ADD, payload: string }
     | { type: ACTIONTYPE.DELETE, payload: number }
     | { type: ACTIONTYPE.DONE, payload: number }
-    | { type: ACTIONTYPE.EDIT, payload: {id:number, todo:string} }
+    | { type: ACTIONTYPE.EDIT, payload: { id: number, todo: string } }
 
 const todoReducer = (todos: Todo[], action: Actions) => {
     switch (action.type) {
@@ -32,8 +32,18 @@ const todoReducer = (todos: Todo[], action: Actions) => {
 }
 
 const Taskify: FC = () => {
+    const initialTodos = (
+        localStorage.getItem('todos') !== null ? JSON.parse(localStorage.getItem('todos') as string) : []
+    )
     const [todo, setTodo] = useState<string>('')
-    const [todos, dispatch] = useReducer(todoReducer, [])
+    const [todos, dispatch] = useReducer(todoReducer, initialTodos)
+
+    useEffect(() => {
+        if (window.localStorage) {
+            const data = JSON.stringify(todos)
+            localStorage.setItem('todos', data)
+        }
+    }, [todos])
 
     const submitHandler = (e: FormEvent) => {
         e.preventDefault()//we don't want to refresh the page, otherwise todos will be emptied
@@ -41,6 +51,7 @@ const Taskify: FC = () => {
             dispatch({ type: ACTIONTYPE.ADD, payload: todo })
             setTodo('')
         }
+
     }
 
     return (

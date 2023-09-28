@@ -11,7 +11,7 @@ import Learnings from './pages/Learnings';
 
 function Pages() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/PDFGenerator_TodoList'>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

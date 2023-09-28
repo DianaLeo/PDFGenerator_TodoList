@@ -1,5 +1,6 @@
 .formSingle {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 20px;
     background-color: rgb(51, 86, 150);

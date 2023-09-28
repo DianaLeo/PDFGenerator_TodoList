@@ -20,7 +20,7 @@
 
 .details{
     display: flex;
-    gap:20px;
+    gap:30px;
 }
 .details ul{
     width: 50%;
@@ -50,7 +50,7 @@
     .details{
         flex-direction: column;
     }
-    .details p{
+    .details ul{
         width: 100%;
     }
     

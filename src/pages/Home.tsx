@@ -16,7 +16,7 @@ const Home: FC = () => {
           <div className='details'>
             <ul>
               <li>Taskify is a todo list, where you can add and delete your things to do, and toggle its status </li>
-              <li>Its state has three fields: id number, todo description, and complete or not status.It is stored in LocalStorage</li>
+              <li>Its state has three fields: id number, todo description, and complete or not status. It is stored in LocalStorage. And its logic is implemented in useReducer and useEffect</li>
               <li>It supports CRUD methods, which are implemented by useReducer hook</li>
               <li>Components have been destructed into the minimal and meaningful size</li>
             </ul>

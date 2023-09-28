@@ -1,5 +1,7 @@
 .learningContainer {
     padding: 50px;
+    width: 80%;
+    margin:0 auto;
 }
 
 h1,h2,h3{
@@ -49,6 +51,8 @@ input{
     border-radius: 5px;
 }
 
-.true{
-    background-color: lightblue;
+@media (max-width:800px) {
+    .learningContainer {
+        width: 100%;
+    }
 }
