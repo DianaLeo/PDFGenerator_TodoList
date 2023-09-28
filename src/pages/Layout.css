@@ -32,11 +32,35 @@ li:hover {
     box-shadow: inset 1px 1px 4px black;
 }
 
+.navBtn {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: rgb(36, 42, 53);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    display: none;
+    z-index: 2;
+}
+
 @media (max-width:700px) {
+    .nav{
+        position: absolute;
+        translate: 0 -100%;
+        box-shadow: 0 0 0 1000px transparent;
+        transition: 0.5s;
+        z-index: 1;        
+    }
     .navUl {
         flex-direction: column;
         justify-content: center;
-        padding: 20px 0;
+        padding: 30px 0;
+    }
+
+    .nav.show {
+        translate: 0 0;
+        box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.6), 0 0 15px black;
     }
 
     .navUl li {
@@ -46,5 +70,9 @@ li:hover {
 
     .link {
         padding: 20px 0;
+    }
+
+    .navBtn {
+        display: block;
     }
 }

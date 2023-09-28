@@ -1,12 +1,17 @@
-# Getting Started with Create React App
+# This is a React with Typescript learning project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[LIVE DEMO](https://dianaleo.github.io/PDFGenerator_TodoList)
 
-## Available Scripts
+Three sections includes: 
+- Learning React hooks
+- Project 1 - Taskify
+- Project 2 - PDFGenerator.
+
+## Learning React hooks
 
 In the project directory, you can run:
 
-### `npm start`
+## Project 1 - Taskify
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+## Project 2 - PDFGenerator
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.

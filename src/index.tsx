@@ -17,9 +17,9 @@ function Pages() {
           <Route index element={<Home />} />
           <Route path="/learnings" element={<Learnings />} />
           <Route path="/taskify" element={<Taskify />} />
+          <Route path="/pdf" element={<PDFViewScreen />} />
           <Route path="*" element={<NoPage />} />
         </Route>
-        <Route path="/pdf" element={<PDFViewScreen />} />
       </Routes>
     </BrowserRouter>
   );

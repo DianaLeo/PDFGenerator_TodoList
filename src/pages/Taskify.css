@@ -1,10 +1,4 @@
 .taskify{
+    width: 100vw;
     padding: 50px;
-}
-
-@media (max-width:800px) {
-    .h1{
-        margin:15px 0;
-        font-size: 35px;
-    }
 }
