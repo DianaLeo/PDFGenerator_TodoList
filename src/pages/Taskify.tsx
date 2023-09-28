@@ -1,27 +1,54 @@
-import { FC,FormEvent,useState } from "react";import TaskifyInputFeild from '../components/Takify/TaskifyInputFeild'
+import { FC, FormEvent, useReducer, useState } from "react"; import TaskifyInputFeild from '../components/Takify/TaskifyInputFeild'
 import './Taskify.css'
 import { Todo } from "../models/model";
 import TaskifyTodoList from "../components/Takify/TaskifyTodoList";
 
-const Taskify:FC = () => {
-    const [todo, setTodo] = useState<string>('')
-    const [todos, setTodos] = useState<Todo[]>([]);
+export enum ACTIONTYPE {
+    ADD,
+    DELETE,
+    DONE,
+    EDIT
+}
 
-    const submitHandler = (e:FormEvent)=>{
+export type Actions =
+    | { type: ACTIONTYPE.ADD, payload: string }
+    | { type: ACTIONTYPE.DELETE, payload: number }
+    | { type: ACTIONTYPE.DONE, payload: number }
+    | { type: ACTIONTYPE.EDIT, payload: {id:number, todo:string} }
+
+const todoReducer = (todos: Todo[], action: Actions) => {
+    switch (action.type) {
+        case ACTIONTYPE.ADD:
+            return [...todos, { id: Date.now(), todo: action.payload, isDone: false }]
+        case ACTIONTYPE.DELETE:
+            return todos.filter((todo) => todo.id !== action.payload)
+        case ACTIONTYPE.DONE:
+            return todos.map((todo) => (todo.id === action.payload) ? { ...todo, isDone: !todo.isDone } : todo)
+        case ACTIONTYPE.EDIT:
+            return todos.map((todo) => (todo.id === action.payload.id) ? { ...todo, todo: action.payload.todo } : todo)
+        default:
+            return todos
+    }
+}
+
+const Taskify: FC = () => {
+    const [todo, setTodo] = useState<string>('')
+    const [todos, dispatch] = useReducer(todoReducer, [])
+
+    const submitHandler = (e: FormEvent) => {
         e.preventDefault()//we don't want to refresh the page, otherwise todos will be emptied
-        if(todo){
-            setTodos([...todos,{id:Date.now(),todo,isDone:false}])
+        if (todo) {
+            dispatch({ type: ACTIONTYPE.ADD, payload: todo })
             setTodo('')
         }
     }
-    console.log(todos);
 
     return (
-        <>
-            <h1 className='title'>TAKSIFY</h1>
-            <TaskifyInputFeild todo={todo} setTodo={setTodo} submitHandler={submitHandler}/>
-            <TaskifyTodoList todos={todos} setTodos={setTodos}/>
-        </>
+        <div className="taskify">
+            <h1 className='title'>TASKIFY</h1>
+            <TaskifyInputFeild todo={todo} setTodo={setTodo} submitHandler={submitHandler} />
+            <TaskifyTodoList todos={todos} dispatch={dispatch} />
+        </div>
     )
 }
 

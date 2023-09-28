@@ -1,10 +1,11 @@
 .formSingle {
     display: flex;
+    align-items: center;
     padding: 20px;
     background-color: rgb(51, 86, 150);
     width: 40%;
     min-width: 300px;
-    margin-top: 15px;
+    margin-top: 20px;
     border-radius: 10px;
 }
 .formSingle.done{
@@ -14,6 +15,8 @@
 .formSingleText{
     flex:1;
     font-size: 20px;
+    border-radius: 5px;
+    height:40px;
     border: none;
 }
 .formSingleText:focus{
@@ -25,6 +28,9 @@
 .formSingleText:disabled{
     background-color: transparent;
     color:white;
+}
+.btnContainer{
+    padding: 0;
 }
 .icon{
     font-size: 25px;

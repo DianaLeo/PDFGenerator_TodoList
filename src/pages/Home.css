@@ -1,0 +1,60 @@
+.home {
+    padding: 50px;
+    width: 80%;
+    margin:0 auto;
+}
+
+.homeUl{
+    list-style: none;
+}
+
+.homelink{
+    display: block;
+    padding: 40px 0;
+    width: 100%;
+    font-size: 30px;
+    transition: 0.2s;
+    text-decoration: none;
+    color: rgb(151, 174, 209);
+}
+
+.details{
+    display: flex;
+    gap:20px;
+}
+.details ul{
+    width: 50%;
+    list-style: inside;
+}
+
+.img{
+    width: 50%;
+    aspect-ratio: 1.5;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.taskifyImg{
+    background-image: url('../Images/taskify.png');
+}
+
+.pdfImg{
+    background-image: url('../Images/pdfgenerator.png');
+}
+
+
+@media (max-width:1000px) {
+    .home {
+        width: 100%;
+    }
+    .details{
+        flex-direction: column;
+    }
+    .details p{
+        width: 100%;
+    }
+    
+    .img{
+        width: 100%;
+    }
+}

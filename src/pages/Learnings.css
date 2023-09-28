@@ -1,13 +1,52 @@
-div {
-    padding: 1rem;
+.learningContainer {
+    padding: 50px;
 }
 
-#flexContainer {
-    display: flex;
-    justify-content: center;
+h1,h2,h3{
+    text-align: center;
+    margin-bottom: 50px;
+}
+h4{
+    margin-top: 50px;
 }
 
-.useContext {
+
+hr{
+    margin: 50px 0;
+    border: 1px dashed gray;
+}
+
+button{
+    margin:10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    background-color: rgb(51, 86, 150);
+    color: white;
+    transition: 0.2s;
+    box-shadow: 1px 1px 4px black;
+}
+button:hover{
+    background-color: rgb(89, 121, 182);
+}
+button:active{
+    transform: scale(0.98);
+    box-shadow: 0 0 2px black;
+}
+
+p,ul,div{
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+strong{
+    color: lightblue;
+}
+
+input{
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 .true{

@@ -29,5 +29,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     width: '100vw',
     minHeight: '100vh',
+    overflow:'hidden'
   }
 });

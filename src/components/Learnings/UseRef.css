@@ -1,0 +1,12 @@
+.useRefUl{
+    list-style:inside;
+}
+
+#flexContainer {
+    display: flex;
+    gap:40px;
+}
+
+.usage{
+    flex:1;
+}

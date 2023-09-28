@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import PDFViewScreen from './pages/PDFViewScreen';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
 import Taskify from './pages/Taskify';
 import Learnings from './pages/Learnings';
@@ -16,9 +15,8 @@ function Pages() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/taskify" element={<Taskify />} />
           <Route path="/learnings" element={<Learnings />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/taskify" element={<Taskify />} />
           <Route path="*" element={<NoPage />} />
         </Route>
         <Route path="/pdf" element={<PDFViewScreen />} />
@@ -32,7 +30,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <Pages />
-  // </React.StrictMode>
+  </React.StrictMode>
 );

@@ -1,11 +1,9 @@
-.title{
-    font-size: 40px;
-    margin:30px 0;
-    text-align: center;
+.taskify{
+    padding: 50px;
 }
 
 @media (max-width:800px) {
-    .title{
+    .h1{
         margin:15px 0;
         font-size: 35px;
     }

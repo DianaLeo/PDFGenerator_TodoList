@@ -17,10 +17,7 @@ const Layout: FunctionComponent = () => {
             <Link className="link" to="/taskify">Taskify</Link>
           </li>
           <li>
-            <Link className="link" to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link className="link" to="/pdf">PDFViewScreen</Link>
+            <Link className="link" to="/pdf" target="_blank" rel="noopener noreferrer">PDFGenerator</Link>
           </li>
         </ul>
       </nav>
