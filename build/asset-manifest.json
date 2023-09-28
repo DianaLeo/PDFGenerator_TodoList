@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PDFGenerator_TodoList/static/css/main.874e85e6.css",
+    "main.js": "/PDFGenerator_TodoList/static/js/main.1122a5bf.js",
+    "static/media/pdfgenerator.png": "/PDFGenerator_TodoList/static/media/pdfgenerator.f874689bd222b823ebf9.png",
+    "static/media/taskify.png": "/PDFGenerator_TodoList/static/media/taskify.029421329f1aceb5bea4.png",
+    "index.html": "/PDFGenerator_TodoList/index.html",
+    "main.874e85e6.css.map": "/PDFGenerator_TodoList/static/css/main.874e85e6.css.map",
+    "main.1122a5bf.js.map": "/PDFGenerator_TodoList/static/js/main.1122a5bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.874e85e6.css",
+    "static/js/main.1122a5bf.js"
+  ]
+}
