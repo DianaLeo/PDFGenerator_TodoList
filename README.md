@@ -9,43 +9,23 @@ Three sections includes:
 
 ## Learning React hooks
 
-In the project directory, you can run:
+- useState
+- useEffect
+- useRef
+- useReducer
+- useContext
 
 ## Project 1 - Taskify
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Taskify is a todo list, where you can add and delete your things to do, and toggle its status 
+- Its state has three fields: id number, todo description, and complete or not status. It is stored in LocalStorage. And its logic is implemented in useReducer and useEffect
+- It supports CRUD methods, which are implemented by useReducer hook
+- Components have been destructed into the minimal and meaningful size
+![taskify](./src/Images/taskify.png)
 
 ## Project 2 - PDFGenerator
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- This project is a PDF file generator. Given a specific format of data, it generates a pdf file automatically 
+- Data format definition is important. Genetic type is applied.
+- Third-party libraries: its layout is implemented with '@react-pdf/renderer'. And the QR code is generated with 'qrcode'
+![PDFGenerator](./src/Images/pdfgenerator.png) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
