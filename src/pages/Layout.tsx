@@ -18,6 +18,9 @@ const Layout: FunctionComponent = () => {
             <Link className="link" to="/learnings" onClick={() => { setShow(s => !s) }}>Learnings</Link>
           </li>
           <li>
+            <Link className="link" to="/googleplaces" onClick={() => { setShow(s => !s) }}>GooglePlaces</Link>
+          </li>
+          <li>
             <Link className="link" to="/taskify" onClick={() => { setShow(s => !s) }}>Taskify</Link>
           </li>
           <li>

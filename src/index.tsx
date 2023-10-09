@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import NoPage from './pages/NoPage';
 import Taskify from './pages/Taskify';
 import Learnings from './pages/Learnings';
+import GooglePlaces from './pages/GooglePlaces';
 
 function Pages() {
   return (
@@ -16,6 +17,7 @@ function Pages() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/learnings" element={<Learnings />} />
+          <Route path="/googleplaces" element={<GooglePlaces />} />
           <Route path="/taskify" element={<Taskify />} />
           <Route path="/pdf" element={<PDFViewScreen />} />
           <Route path="*" element={<NoPage />} />

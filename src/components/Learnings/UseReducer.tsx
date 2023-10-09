@@ -45,8 +45,8 @@ export const UseReducer: FC = () => {
             <p>The reducer takes <strong>a state (can be an array of objects) and an action</strong>. <br></br>
             The action takes <strong>a state processing type and a payload of inputs for processing the state</strong>.<br></br>
             Inside The reducer are the data processing logic (CRUD), switched by action type parameter.</p>
-            {todos.map(item => (
-                <label>
+            {todos.map((item,index) => (
+                <label key={index}>
                     <input type='checkbox' checked={item.complete} onChange={() => { handleComplete(item) }}></input>
                     {item.title}
                 </label>
